@@ -21,9 +21,10 @@ Locker.ai was created by Elijah Cohen, Fernando Herrera, Jackson Spindle, and Ol
 
 ## Installation
 
-### Prerequesits
+### Prerequesits for local installation
 
 - Node
+- Local PostreSQL database
 - OpenAI API Key
 
 ### To run locally:
