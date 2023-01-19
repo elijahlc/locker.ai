@@ -1,0 +1,52 @@
+nav {
+	z-index: 1;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	height: calc(var(--vh, 1vh) * 3);
+	background-color: var(--dark-gray);
+	color: #fff;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
+nav img {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	margin-left: 1rem;
+}
+
+nav img:hover {
+	cursor: pointer;
+}
+
+.Nav-right {
+	display: flex;
+	align-items: center;
+}
+
+.Nav-menu {
+	background-color: var(--light-gray);
+	border-radius: 5px;
+	position: absolute;
+	top: 3.5rem;
+	right: 25px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0;
+}
+
+.Nav-menu a {
+	color: var(--dark-gray);
+}
+
+.Nav-menu > * {
+	margin: 0.25rem 1rem;
+}

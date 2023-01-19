@@ -1,0 +1,148 @@
+.CreateShoe {
+	width: calc(100vw - 2rem);
+	margin: 1rem;
+	height: calc((var(--vh, 1vh) * 97) - 4rem);
+	display: flex;
+	justify-content: space-between;
+}
+
+.CreateShoe-image-controls {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+}
+
+.CreateShoe-image-controls h1 {
+	margin: 0;
+	align-self: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+.CreateShoe-image-controls input[type='text'] {
+	font-size: 1rem;
+	padding: 0.25rem;
+	font-weight: 300;
+}
+
+.CreateShoe-image-controls span {
+	width: 75%;
+	height: 0;
+	padding-bottom: 75%;
+	align-self: center;
+}
+
+.CreateShoe-default-image {
+	width: 75%;
+	align-self: center;
+	padding-bottom: 75%;
+}
+
+.CreateShoe-image-controls img {
+	width: 75%;
+	align-self: center;
+}
+
+.CreateShoe-canvas-controls {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.CreateShoe-canvas {
+	flex: 4;
+	position: relative;
+}
+
+.CreateShoe-colors-actions {
+	display: flex;
+	align-items: center;
+}
+
+.CreateShoe-color-controls {
+	flex: 1;
+}
+
+.CreateShoe-color-controls form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.CreateShoe-color {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem 0;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+input[type='color'] {
+	border: 2px solid var(--dark-gray);
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+	padding: 0;
+	border-radius: 50%;
+}
+
+input[type='color']::-webkit-color-swatch {
+	border: none;
+	border-radius: 50%;
+}
+
+.CreateShoe-actions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.CreateShoe-actions button {
+	margin: 0.5rem 0;
+}
+
+@media (max-width: 800px) {
+	.CreateShoe {
+		flex-direction: column;
+	}
+
+	.CreateShoe-image-controls {
+		height: fit-content;
+	}
+
+	.CreateShoe-image-controls h1 {
+		font-size: 2.5rem;
+	}
+
+	.CreateShoe-image-controls * {
+		margin-top: 1rem;
+	}
+
+	.CreateShoe-colors-actions {
+		flex-direction: column;
+	}
+
+	.CreateShoe-colors-actions label {
+		text-align: center;
+	}
+
+	.CreateShoe-actions {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}

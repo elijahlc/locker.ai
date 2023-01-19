@@ -1,0 +1,96 @@
+.Locker {
+	width: calc(100vw - 2rem);
+	margin: 1rem;
+	height: calc((var(--vh, 1vh) * 97) - 4rem);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-image: url('../static/locker-charcoal.png');
+	background-size: 20% 100%;
+	background-position: center;
+	background-color: var(--white);
+}
+
+.Locker-card {
+	width: 20%;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.Locker-shoe-art-details {
+	margin: 5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Locker-shoe-image:hover,
+.Locker-shoe-palette:hover {
+	cursor: pointer;
+}
+
+.Locker-shoe-image {
+	width: 35%;
+	background-size: cover;
+}
+
+.Locker-shoe-name {
+	text-transform: uppercase;
+	background-color: var(--tan);
+	letter-spacing: 2px;
+	color: var(--dark-gray);
+	padding: 0.5rem;
+	border-radius: 3px;
+	margin: 0 4rem;
+}
+
+.Locker-shoe-palette {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 35%;
+	border-radius: 5px;
+}
+
+.Locker-shoe-color {
+	width: 12.5%;
+	height: 1rem;
+}
+
+.Locker-card i {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.Locker-card i:hover {
+	cursor: pointer;
+}
+
+.Locker-page {
+	z-index: 1;
+	position: absolute;
+	padding: 0.5rem;
+}
+
+.left {
+	left: 0.25rem;
+}
+
+.right {
+	right: 0.25rem;
+}
+
+@media (max-width: 800px) {
+	.Locker {
+		background-size: 100% 100%;
+	}
+
+	.Locker-card {
+		width: 100%;
+		height: 100%;
+	}
+}

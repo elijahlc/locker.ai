@@ -1,0 +1,142 @@
+.Login,
+.Register {
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
+	padding: 1rem;
+
+	backdrop-filter: blur(9px) saturate(200%);
+	-webkit-backdrop-filter: blur(9px) saturate(200%);
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 12px;
+	border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.Login form,
+.Register form {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+
+.Login h1,
+.Login > div,
+.Register h1,
+.Register > div {
+	align-self: center;
+}
+
+.Login h1,
+.Register h1 {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+.Login input,
+.Register input,
+.Profile input {
+	font-size: 1rem;
+	padding: 0.25rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.Login label,
+.Register label,
+.Profile label {
+	margin-bottom: 0.5rem;
+}
+
+.Register form div,
+.Profile form div {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Register form span,
+.Profile form span {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.Register-horizontal:nth-of-type(2) {
+	margin-left: 2rem;
+}
+
+input::file-selector-button {
+	background-color: var(--dark-gray);
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding: 0.25rem 1.5rem;
+}
+
+input::file-selector-button:hover {
+	background-color: var(--medium-gray);
+	cursor: pointer;
+}
+
+.Register img {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
+
+.Login-error,
+.Register-error,
+.Profile-error {
+	color: var(--red);
+	margin-bottom: 1rem;
+	font-weight: 400;
+}
+
+div.Register-error,
+div.Profile-error {
+	display: flex;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+}
+
+.Register-error ul,
+.Profile-error ul {
+	font-weight: 300;
+}
+
+@media (max-width: 800px) {
+	.Login,
+	.Register {
+		width: 90vw;
+	}
+
+	.Register form div,
+	.Profile form div:nth-of-type(1) {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.Register-horizontal {
+		margin: 0;
+		width: 100%;
+	}
+
+	.Register-horizontal:nth-of-type(2) {
+		margin-left: 0;
+	}
+
+	.Register img {
+		margin-bottom: 1rem;
+	}
+}

@@ -1,0 +1,21 @@
+.NotFound {
+	width: calc(100vw - 2rem);
+	margin: 1rem;
+	height: calc((var(--vh, 1vh) * 97) - 4rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.NotFound h1 {
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+.Notfound a {
+	text-decoration: none;
+	color: #fff;
+}

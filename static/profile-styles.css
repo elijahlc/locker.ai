@@ -1,0 +1,92 @@
+.Profile-container {
+	margin: 1rem;
+	display: flex;
+	padding: 1rem;
+
+	backdrop-filter: blur(9px) saturate(200%);
+	-webkit-backdrop-filter: blur(9px) saturate(200%);
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 12px;
+	border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.Profile-half {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.Profile-half:nth-of-type(1) label {
+	display: inline;
+	align-self: center;
+	position: absolute;
+}
+
+.Profile-half:nth-of-type(1) label:hover {
+	cursor: pointer;
+}
+
+.Profile-half img {
+	align-self: center;
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+.Profile label.required {
+	color: var(--red);
+}
+
+.Profile-half button {
+	align-self: center;
+}
+
+.avatar-overlay {
+	position: relative;
+	text-align: center;
+	top: -25;
+	color: #fff;
+	padding: 0.25rem 0;
+	border-radius: 5px;
+	background-color: rgba(33, 37, 41, 0.8);
+}
+
+.Profile-container h1 {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 2.5rem;
+}
+
+.Profile-details {
+	letter-spacing: 2px;
+	text-transform: lowercase;
+	font-weight: 200;
+	font-size: 2rem;
+}
+
+.Profile .button-link {
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 1.125rem;
+}
+
+@media (max-width: 800px) {
+	.Profile-container {
+		flex-direction: column;
+	}
+
+	.Profile-container h1 {
+		font-size: 2rem;
+	}
+
+	.Profile-details {
+		font-size: 1.5rem;
+	}
+
+	.Profile-half:nth-of-type(1) label {
+		position: static;
+	}
+}

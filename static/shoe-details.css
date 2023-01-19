@@ -1,0 +1,75 @@
+.ShoeDetails {
+	width: calc(100vw - 2rem);
+	margin: 1rem;
+	height: calc((var(--vh, 1vh) * 97) - 4rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.ShoeDetails h1 {
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.ShoeDetails h1 span {
+	font-style: italic;
+}
+
+.ShoeDetails-canvas-controls {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.ShoeDetails-canvas {
+	flex: 4;
+	position: relative;
+}
+
+.ShoeDetails-colors-actions {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.ShoeDetails-color-controls {
+	flex: 1;
+}
+
+.ShoeDetails-color-controls form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.ShoeDetails-actions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.ShoeDetails-actions button {
+	margin: 0.5rem 0;
+}
+
+@media (max-width: 800px) {
+	.ShoeDetails h1 {
+		font-size: 2.5rem;
+		text-align: center;
+	}
+
+	.ShoeDetails-actions {
+		width: 100%;
+	}
+
+	.ShoeDetails-colors-actions {
+		flex-direction: column;
+	}
+}
