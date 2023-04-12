@@ -36,6 +36,26 @@ const CreateShoe = () => {
 
 	useEffect(() => {
 		document.title = 'Locker.ai: Create a Shoe';
+
+		const savedShoe = JSON.parse(window.localStorage.getItem('shoe'));
+
+		if (savedShoe) {
+			window.localStorage.removeItem('shoe');
+
+			setPrompt(savedShoe.name);
+			setLaces(savedShoe.laceColor);
+			setTongue(savedShoe.tongueColor);
+			setSole(savedShoe.soleColor);
+			setCollar(savedShoe.collarColor);
+			setTag(savedShoe.tagColor);
+			setBadge(savedShoe.badgeColor);
+			setTongueStrap(savedShoe.tongueStrapColor);
+			setEyelets(savedShoe.eyeletsColor);
+			setScaleX(savedShoe.scaleX);
+			setScaleY(savedShoe.scaleY);
+			setRepeatAmount(savedShoe.repeatAmount);
+			setImage(`data:image/png;base64,${savedShoe.image}`);
+		}
 	}, []);
 
 	const getImage = async (e) => {
@@ -91,17 +111,22 @@ const CreateShoe = () => {
 			repeatAmount: repeatAmount,
 		};
 
-		if (image.startsWith('data:image/png;base64,')) {
-			dispatch(addToLocker(shoe));
+		if (auth.id) {
+			if (image.startsWith('data:image/png;base64,')) {
+				dispatch(addToLocker(shoe));
 
-			enqueueSnackbar('Shoe added to locker!', {
-				variant: 'success',
-				action,
-			});
+				enqueueSnackbar('Shoe added to locker!', {
+					variant: 'success',
+					action,
+				});
+			} else {
+				enqueueSnackbar('Please add an image to your shoe', {
+					variant: 'error',
+				});
+			}
 		} else {
-			enqueueSnackbar('Please add an image to your shoe', {
-				variant: 'error',
-			});
+			window.localStorage.setItem('shoe', JSON.stringify(shoe));
+			navigate('/login');
 		}
 	};
 
@@ -271,7 +296,7 @@ const CreateShoe = () => {
 					</div>
 					<div className="CreateShoe-actions">
 						<button className="button button-small" onClick={_addToLocker}>
-							Add to Locker
+							<span className="button-tooltip">Add to Locker</span>
 						</button>
 
 						<button className="button button-small" onClick={reset}>

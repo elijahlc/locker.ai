@@ -67,6 +67,10 @@ button:disabled {
 	opacity: 0.3;
 }
 
+.button:disabled {
+	cursor: not-allowed;
+}
+
 .SnackbarItem-variantSuccess,
 .SnackbarItem-variantInfo {
 	background-color: var(--light-gray) !important;
