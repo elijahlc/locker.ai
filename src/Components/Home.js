@@ -12,11 +12,7 @@ const Home = () => {
 	const { pathname } = useLocation();
 
 	const handleClickMain = () => {
-		if (auth.id) {
-			navigate('/create');
-		} else {
-			navigate('/register');
-		}
+		navigate('/create');
 	};
 
 	return (
@@ -37,7 +33,7 @@ const Home = () => {
 						<h1>Design your own 3D shoe using AI</h1>
 
 						<button className="button-large button" style={{ border: '2px white solid' }} onClick={handleClickMain}>
-							{auth.id ? 'Create' : 'Get Started'}
+							Get Started
 						</button>
 					</div>
 				)}
