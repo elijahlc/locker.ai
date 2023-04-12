@@ -296,7 +296,7 @@ const CreateShoe = () => {
 					</div>
 					<div className="CreateShoe-actions">
 						<button className="button button-small" onClick={_addToLocker}>
-							<span className="button-tooltip">Add to Locker</span>
+							Add to Locker
 						</button>
 
 						<button className="button button-small" onClick={reset}>
